@@ -116,10 +116,11 @@ def main():
 
         # See opencv/CMakeLists.txt for options and defaults
         "-DBUILD_opencv_apps=OFF",
-        "-DBUILD_SHARED_LIBS=OFF",
+        "-DBUILD_SHARED_LIBS=ON",
         "-DBUILD_TESTS=OFF",
         "-DBUILD_PERF_TESTS=OFF",
-        "-DBUILD_DOCS=OFF"
+        "-DBUILD_DOCS=OFF",
+        "-DBUILD_opencv_world=OFF"
     ] + (["-DOPENCV_EXTRA_MODULES_PATH=" + os.path.abspath("opencv_contrib/modules")] if build_contrib else [])
 
     # OS-specific components
